@@ -1,0 +1,49 @@
+<p>medicacita works!</p>
+<br>
+<div class="container">
+  <div class="buttons">
+    <button (click)="toggleForm()">Separar Cita</button>
+    <button (click)="toggleVerification()">Verificar Cita</button>
+  </div>
+  <div *ngIf="showForm" class="form-container">
+    <form (ngSubmit)="onSubmit()">
+      <label for="nombreApellido">Nombre y Apellido:</label>
+      <input type="text" id="nombreApellido" [ngModel]="formData.nombreApellido" name="nombreApellido" required>
+
+      <label for="cedula">Cédula:</label>
+      <input type="text" id="cedula" [ngModel]="formData.cedula" name="cedula" required>
+
+      <label>Tipo de Servicio:</label>
+      <div>
+        <input type="radio" id="veterinaria" [ngModel]="formData.servicio" name="servicio" value="Veterinaria" required>
+        <label for="veterinaria">Veterinaria</label>
+      </div>
+      <div>
+        <input type="radio" id="peluqueria" [ngModel]="formData.servicio" name="servicio" value="Peluquería" required>
+        <label for="peluqueria">Peluquería</label>
+      </div>
+
+      <label for="tipoMascota">Tipo de Mascota:</label>
+      <select id="tipoMascota" [ngModel]="formData.tipoMascota" name="tipoMascota" required>
+        <option value="perro">Perro</option>
+        <option value="gato">Gato</option>
+      </select>
+
+      <label for="numeroConsulta">Número de Consulta:</label>
+      <input type="text" id="numeroConsulta" [ngModel]="formData.numeroConsulta" name="numeroConsulta" readonly>
+
+      <button type="submit">Generar Cita</button>
+    </form>
+  </div>
+
+  <div *ngIf="showVerification" class="verification-container">
+    <p>Cita Generada</p>
+    <div>
+      <p>Nombre y Apellido: {{ formData.nombreApellido }}</p>
+      <p>Cédula: {{ formData.cedula }}</p>
+      <p>Tipo de Servicio: {{ formData.servicio }}</p>
+      <p>Número de Consulta: {{ formData.numeroConsulta }}</p>
+    </div>
+  </div>
+</div>
+<form (ngSubmit)="onSubmit()">

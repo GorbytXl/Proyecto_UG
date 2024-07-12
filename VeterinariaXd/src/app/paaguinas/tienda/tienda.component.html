@@ -1,0 +1,33 @@
+<div class="background-image"></div>
+<br>
+<br>
+<div class="store-container">
+  <div class="product-card" *ngFor="let product of products">
+    <div class="product-image">
+      <img [src]="product.image" alt="{{product.name}}">
+      <div class="product-overlay">
+        <div class="product-description">{{product.description}}</div>
+      </div>
+    </div>
+    <h3 class="product-name">{{product.name}}</h3>
+  </div>
+</div>
+<div class="info-container">
+  <h2>Compras en el Local</h2>
+  <p>Si desea hacer compras, todas son en el local.</p>
+  <div class="social-media">
+    <h3>Síguenos en nuestras redes sociales:</h3>
+    <a href="https://www.facebook.com/tu-pagina" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/128/1384/1384005.png" alt="Facebook" class="social-icon">
+    </a>
+    <a href="https://www.twitter.com/tu-pagina" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/128/3669/3669691.png" alt="Twitter" class="social-icon">
+    </a>
+    <a href="https://www.instagram.com/tu-pagina" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/128/1384/1384015.png" alt="Instagram" class="social-icon">
+    </a>
+  </div>
+  <div class="store-image">
+    <img src="https://cdn-icons-png.flaticon.com/128/3485/3485983.png" alt="Imagen de la tienda" class="circular-image">
+  </div>
+</div>

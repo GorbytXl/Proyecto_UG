@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  padding: 20px;
+  min-height: calc(100vh - 140px); /* Ajusta este valor según la altura del header y footer */
+}
+
+

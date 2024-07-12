@@ -1,0 +1,141 @@
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 40px; /* Ajusta el tamaño según sea necesario */
+  height: 40px; /* Mantén el mismo valor para que sea circular */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.menu-button {
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.menu.show {
+  display: flex;
+}
+
+.menu li {
+  border-bottom: 1px solid #ddd;
+}
+
+.menu li:last-child {
+  border-bottom: none;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  display: block;
+}
+
+.menu li a:hover {
+  background: #eee;
+}
+
+.content {
+  padding-top: 70px; /* Ajusta este valor según la altura de tu header */
+  padding: 20px; /* Otros padding adicionales si es necesario */
+  text-align: center;
+}
+
+.store-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f0f0f0; /* Fondo claro para la tienda */
+}
+
+.product-card {
+  width: 200px; /* Ajusta el tamaño según sea necesario */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.product-image:hover .product-overlay {
+  opacity: 1;
+}
+
+.product-name {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}

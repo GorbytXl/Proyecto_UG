@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  background: url('https://img.freepik.com/vector-gratis/marco-vector-perros-sobre-fondo-blanco_53876-127700.jpg') no-repeat center center fixed; /* Reemplaza con la URL de tu imagen de fondo */
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+}
+.header, .content, .about {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.header h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+.header p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+.content h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+.content p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+.content button {
+  background-color: #00aaff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+.content button:hover {
+  background-color: #0088cc;
+}
+.about h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+.about p {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+.circular-image {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  margin: 10px;
+}
