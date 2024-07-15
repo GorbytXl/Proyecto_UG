@@ -1,0 +1,8 @@
+CREATE TABLE Clientes (
+    ClienteID INT IDENTITY(1,1) PRIMARY KEY,
+    Nombre NVARCHAR(100) NOT NULL,
+    Direccion NVARCHAR(255),
+    Telefono NVARCHAR(15),
+    CorreoElectronico NVARCHAR(100) NOT NULL,
+    CONSTRAINT UQ_CorreoElectronico UNIQUE (CorreoElectronico)
+);
